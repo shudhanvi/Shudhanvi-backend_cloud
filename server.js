@@ -17,7 +17,7 @@ const allowedOrigins = [
   "http://localhost:3000",
   "https://shudh-anvi-main.onrender.com",
   "https://shudh.anvirobotics.com",
-  "https://shudh-anvi-main-l6pz.onrender.com" //new render
+  "https://shudh-anvi-main-l6pz.onrender.com" ,//new render
 ];
 
 const corsOptions = {
