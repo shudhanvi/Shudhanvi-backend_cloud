@@ -58,9 +58,10 @@ const blobServiceClient = new BlobServiceClient(
 // 🔹 SAS Generator
 // ======================
 function generateSAS(container, blobName) {
-  const now = new Date();
-  const expiry = new Date(now);
-  expiry.setHours(now.getHours() + 48); // 48 hours expiry
+const now = new Date();
+const startsOn = new Date(now.getTime() - 5 * 60 * 1000); // 5 min earlier
+const expiry = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000); // 7 days expiry
+
 
   const sasParams = generateBlobSASQueryParameters(
     {
